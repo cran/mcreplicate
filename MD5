@@ -1,0 +1,8 @@
+89c4faec856ee2cc200c462dbf18d282 *DESCRIPTION
+05c39fff75f30d473ed5671c826116cd *NAMESPACE
+edec059f78cfa0b10a1efd75d945b5af *NEWS.md
+2b3f034694de99826295acebfda82fae *R/mcreplicate.R
+d2f78ce3a7f35150be97f3ab7f590716 *README.md
+f4f82588e8cf010b8c6c501029dc3541 *man/mc_replicate.Rd
+879723e8e0b377dd36b11a01d8a2c944 *tests/testthat.R
+210cfa335eeb8a1cf45435a3f1078528 *tests/testthat/test-mcreplicate.R
