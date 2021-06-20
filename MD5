@@ -1,8 +1,8 @@
-89c4faec856ee2cc200c462dbf18d282 *DESCRIPTION
-05c39fff75f30d473ed5671c826116cd *NAMESPACE
-edec059f78cfa0b10a1efd75d945b5af *NEWS.md
-2b3f034694de99826295acebfda82fae *R/mcreplicate.R
-d2f78ce3a7f35150be97f3ab7f590716 *README.md
-f4f82588e8cf010b8c6c501029dc3541 *man/mc_replicate.Rd
+ba0f499d91dc9834322c0fa4e0070eda *DESCRIPTION
+7fa6dd47a699fdc89ba0e44c4902fe1d *NAMESPACE
+79b93cfd660a6eac808bdd8af8b61b59 *NEWS.md
+ba7bf6b6618f8e39d0d8345dfbaa119c *R/mcreplicate.R
+2a8bace6a8cbbbc04647540c2a4a30bc *README.md
+1da8003e54b524a1fcb519f640b835f6 *man/mc_replicate.Rd
 879723e8e0b377dd36b11a01d8a2c944 *tests/testthat.R
-210cfa335eeb8a1cf45435a3f1078528 *tests/testthat/test-mcreplicate.R
+b9a709c47c70ee0f83c94d989ba27103 *tests/testthat/test-mcreplicate.R

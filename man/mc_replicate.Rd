@@ -9,31 +9,63 @@ Rethinking book package. R package version 2.13.
 \url{https://github.com/rmcelreath/rethinking}
 }
 \usage{
-mc_replicate(n, expr, refresh = 0.1, mc.cores = 2)
+mc_replicate(
+  n,
+  expr,
+  mc.cores = detectCores(),
+  cluster,
+  varlist,
+  envir,
+  packages,
+  refresh = 0.1
+)
 }
 \arguments{
-\item{n}{integer: the number of replications.}
+\item{n}{integer; the number of replications.}
 
-\item{expr}{the expression (a language object, usually a call) to evaluate repeatedly.}
+\item{expr}{the expression (a language object, usually a call) to evaluate
+repeatedly.}
 
-\item{refresh}{status update refresh interval}
+\item{mc.cores}{number of cores to use.}
 
-\item{mc.cores}{number of cores to use}
+\item{cluster}{logical. If \code{TRUE} then clustering, rather than forking,
+is used to replicate the specified function in parallel. Note: if you
+are using Windows, only cluster is available.}
+
+\item{varlist}{Only used on Windows! Character vector of variable names to
+export on each worker. Default is all variables in the current environment
+which do not begin with a ".". See \link[parallel]{clusterExport} for more
+information.}
+
+\item{envir}{Only used on Windows! Environment from which  to export
+variables. Default is the environment from which this function was called.
+See \link[parallel]{clusterExport} for more information.}
+
+\item{packages}{Only used on Windows! Environment from which  to export
+variables. Default is all loaded packages. See \link[parallel]{clusterExport}
+for more information.}
+
+\item{refresh}{Not on Windows! status update refresh interval}
 }
 \value{
 A vector, matrix, or list of length \code{n}.
 }
 \description{
-Multi-core replicate.
+Use multiple cores for repeated evaluation of an expression.
+This also works on Windows using a parallel socket cluster.
 }
 \examples{
-one_sim <- function(n, control_prob, rel_effect) {
+one_sim <- function(n = 100, control_prob = 0.1, rel_effect = 0.01) {
   treat_prob <- control_prob + (control_prob * rel_effect)
   cy <- rbinom(n = n, size = 1, prob = control_prob)
   ty <- rbinom(n = n, size = 1, prob = treat_prob)
   mean(ty) - mean(cy)
   }
 
-  mc_replicate(10, one_sim(n = 100, control_prob = 0.1, rel_effect = 0.01))
+  mc_replicate(10, one_sim(), mc.cores = 2)
+
+  # On Windows, when no particular packages or additional variables are needed
+ # mc_replicate(10, one_sim(), , mc.cores = 2, packages = NULL,
+ #              varlist = "one_sim", envir = environment())
 
 }

@@ -5,22 +5,26 @@ Description: Multi-core replication function to make it easier to do fast
   which is onerous to install, while also not adding capabilities to this 
   function.
 Title: Multi-Core Replicate
-Version: 0.1.1
-Date: 2021-03-21
+Version: 0.1.2
+Date: 2021-05-29
 Authors@R: c(
     person("Christopher", "Gandrud", email = "christopher.gandrud@gmail.com",
-    role = c("aut", "cre"))
+    role = c("aut", "cre")),
+    person("Olivier", "Binette", email = "olivier.binette@gmail.com", 
+    role=c("ctb")),
+    person("AUTUMN41", role=c("ctb"))
     )
 Imports: parallel
 License: AGPL (>= 3)
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.1.1
 Suggests: testthat (>= 3.0.0), covr
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2021-03-22 19:06:54 UTC; cgandrud
-Author: Christopher Gandrud [aut, cre]
+Packaged: 2021-06-20 05:09:16 UTC; cgandrud
+Author: Christopher Gandrud [aut, cre],
+  Olivier Binette [ctb],
+  AUTUMN41 [ctb]
 Maintainer: Christopher Gandrud <christopher.gandrud@gmail.com>
 Repository: CRAN
-Date/Publication: 2021-03-23 09:00:03 UTC
+Date/Publication: 2021-06-20 06:20:02 UTC
